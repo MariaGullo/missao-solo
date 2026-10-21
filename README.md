@@ -38,3 +38,11 @@ A hortinha usa falas distintas para escolher, plantar, regar, germinar, desenvol
 O certificado acompanha no navegador as descobertas dos quatro solos, os quatro experimentos, os cinco segredos subterrâneos, um cultivo concluído e o resultado do quiz (sem exigir nota mínima). O Modo professora permite emitir certificados sem concluir essas atividades. Os quatro áudios do certificado são locais; o nome não é enviado a nenhum servidor.
 
 O conteúdo foi preparado a partir das características pedagógicas especificadas no pedido. Nenhum PDF didático estava disponível entre os arquivos recebidos.
+
+## 🌐 Acesse o site
+
+O **Missão Solo** está disponível online! 🌱🪱
+
+Explore os diferentes tipos de solo, participe de experiências interativas, descubra os segredos do mundo subterrâneo e aprenda Ciências de forma divertida com a Lola!
+
+👉 **[Clique aqui para acessar o Missão Solo](https://mariagullo.github.io/missao-solo/)**
