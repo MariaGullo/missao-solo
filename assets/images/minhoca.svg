@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 310" role="img" aria-labelledby="title desc">
+  <title id="title">Lola, a minhoca exploradora</title>
+  <desc id="desc">Minhoca coral sorridente usando chapéu de exploradora verde e marrom.</desc>
+  <defs>
+    <linearGradient id="body" x2="0" y2="1"><stop stop-color="#ffad96"/><stop offset="1" stop-color="#f27667"/></linearGradient>
+    <linearGradient id="hat" x2="0" y2="1"><stop stop-color="#e9bb63"/><stop offset="1" stop-color="#b87931"/></linearGradient>
+    <filter id="shadow" x="-.2" y="-.2" width="1.4" height="1.4"><feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#55351d" flood-opacity=".2"/></filter>
+  </defs>
+  <g filter="url(#shadow)" stroke="#673523" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M58 253c-34-5-46-33-35-57 12-25 41-29 57-10 13 15 2 36 20 39 16 2 23-20 37-39 17-24 51-31 70-13 21 21 6 49-13 63-35 26-91 28-136 17Z" fill="url(#body)"/>
+    <path d="M103 216c-3 11-2 21 1 29M153 200c-8 11-12 25-11 37" fill="none" stroke="#d75f55" stroke-width="5"/>
+    <path d="M167 181c-11-24-12-64 3-92 14-27 46-40 76-26 28 14 36 47 26 76-10 29-40 49-75 48Z" fill="url(#body)"/>
+    <ellipse cx="206" cy="119" rx="13" ry="20" fill="#fff"/><ellipse cx="253" cy="115" rx="13" ry="20" fill="#fff"/>
+    <ellipse cx="210" cy="124" rx="6" ry="10" fill="#35251f" stroke="none"/><ellipse cx="257" cy="120" rx="6" ry="10" fill="#35251f" stroke="none"/>
+    <path d="M208 153c14 15 36 16 49-2" fill="none" stroke="#813c35" stroke-width="5"/>
+    <path d="M187 137c-5 8-12 10-19 8M275 139c7 4 12 3 17-3" fill="none" stroke="#ee8c78" stroke-width="7"/>
+    <path d="M143 101c9-45 43-75 89-71 28 2 46 17 54 40-39-14-86-5-127 23l-16 8Z" fill="url(#hat)"/>
+    <path d="M139 100c34-37 94-57 154-30 17 8 29 20 25 30-4 11-25 14-42 8-48-15-94-7-137 13-21 10-39-4-26-21 6-8 16-11 26-8Z" fill="#c98b42"/>
+    <path d="M180 71c20-8 47-13 69-11" fill="none" stroke="#98602d" stroke-width="5"/>
+    <path d="M218 35c-4-18 6-27 17-26 2 9 0 17-6 25 14-10 23-7 27 1-8 11-21 14-38 8Z" fill="#55a83f"/>
+    <path d="M231 40c3-9 5-18 4-27" fill="none" stroke="#267b36" stroke-width="3"/>
+  </g>
+  <path d="M37 276c32-14 52 16 82 4 25-10 30-22 54-17" fill="none" stroke="#73a63a" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="71" cy="185" r="5" fill="#fff" opacity=".8"/>
+</svg>

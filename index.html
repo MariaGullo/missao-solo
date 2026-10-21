@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#78d4f4">
+  <meta name="description" content="Uma aventura educativa para descobrir os tipos de solo, brincar no laboratório da água e cultivar uma hortinha.">
+  <title>Missão Solo — Aprenda brincando!</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="data/content.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Cabeçalho e navegação -->
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Missão Solo — início">
+      <span class="brand-leaf" aria-hidden="true">✿</span> Missão <span>Solo</span><span class="brand-sprout" aria-hidden="true">🌱</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">☰</button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+      <a href="#inicio" aria-label="Início" title="Início">⌂ <span>Início</span></a>
+      <a href="#explorar" aria-label="Explorar os solos" title="Explorar os solos">❋ <span>Solos</span></a>
+      <a href="#experimentos" aria-label="Experimentos — Laboratório da água" title="Experimentos — Laboratório da água">⚗ <span>Laboratório</span></a>
+      <a href="#mundo-subterraneo" aria-label="O Mundo Debaixo da Terra" title="O Mundo Debaixo da Terra">⛏ <span>Subterrâneo</span></a>
+      <a href="#hortinha" aria-label="Minha hortinha" title="Minha hortinha">♧ <span>Hortinha</span></a>
+      <a href="#quiz" aria-label="Quiz dos Exploradores" title="Quiz dos Exploradores">★ <span>Quiz</span></a>
+      <a href="#certificado" aria-label="Meu Certificado" title="Meu Certificado">🏅 <span>Certificado</span></a>
+    </nav>
+    <div class="top-actions">
+      <button id="lola-voice-toggle" class="voice-toggle" type="button" aria-pressed="false" aria-label="Ativar a voz da Lola" title="Ativar a voz da Lola">🔇</button>
+      <button id="teacher-toggle" class="teacher-toggle" type="button" aria-pressed="false" title="Ativar modo professora">🎓 <span>Modo professora</span></button>
+      <button id="fullscreen-button" class="icon-button" type="button" title="Ativar tela cheia" aria-label="Ativar tela cheia">⛶</button>
+    </div>
+  </header>
+
+  <!-- Atividades da missão -->
+  <main id="conteudo">
+    <!-- Apresentação da aventura -->
+    <section id="inicio" class="hero garden-scene" aria-labelledby="hero-title">
+      <div class="sun" aria-hidden="true"></div>
+      <div class="cloud cloud-one" aria-hidden="true"></div>
+      <div class="cloud cloud-two" aria-hidden="true"></div>
+      <div class="butterfly butterfly-one" aria-hidden="true"><img src="assets/icons/butterfly.svg" alt=""></div>
+      <div class="butterfly butterfly-two" aria-hidden="true"><img src="assets/icons/butterfly.svg" alt=""></div>
+      <div class="butterfly butterfly-three" aria-hidden="true"><img src="assets/icons/butterfly.svg" alt=""></div>
+      <div class="butterfly butterfly-four" aria-hidden="true"><img src="assets/icons/butterfly.svg" alt=""></div>
+      <div class="butterfly butterfly-five" aria-hidden="true"><img src="assets/icons/butterfly.svg" alt=""></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Uma aventura de descobertas</p>
+        <h1 id="hero-title">Missão <span>Solo</span></h1>
+        <p class="hero-subtitle">Aprenda brincando sobre os tipos de solo!</p>
+        <div class="speech-bubble">
+          <strong>Olá, pequeno explorador!</strong>
+          <p id="hero-speech-text">Vamos descobrir os segredos que estão debaixo dos nossos pés?</p>
+        </div>
+        <a class="button button-orange hero-cta" href="#explorar">🧭 Começar aventura <span aria-hidden="true">➜</span></a>
+      </div>
+      <div class="hero-mascot">
+        <img src="assets/images/minhoca.svg" alt="Lola, uma minhoca sorridente usando chapéu de exploradora">
+        <span class="mascot-label">Lola, sua guia!</span>
+      </div>
+      <div class="garden-hills" aria-hidden="true"><span>🌼</span><span>🌷</span><span>🌻</span><span>🌿</span><span>🌼</span></div>
+      <div class="soil-strata" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+
+    <!-- Exploração dos tipos de solo -->
+    <section id="explorar" class="section section-explore" aria-labelledby="explore-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Escolha uma pista e investigue!</p><h2 id="explore-title">🔎 Conheça os solos</h2></div>
+        <p>Cada solo tem um jeitinho especial. Toque em um cartão para descobrir!</p>
+      </div>
+      <div id="soil-cards" class="soil-grid"></div>
+      <div id="soil-detail" class="soil-detail" hidden aria-live="polite"></div>
+    </section>
+
+    <!-- Experimentos com água -->
+    <section id="experimentos" class="section lab-section" aria-labelledby="lab-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Investigar, observar, aprender</p><h2 id="lab-title">💧 Laboratório da água</h2></div>
+        <p>Será que a água atravessa todos os solos do mesmo jeito?</p>
+      </div>
+      <div class="activity-card lab-card">
+        <div class="activity-intro">
+          <div class="activity-icon" aria-hidden="true">🧪</div>
+          <div><h3>Faça uma experiência</h3><p>Escolha um recipiente e aperte o regador. Observe a água e compare!</p></div>
+        </div>
+        <div id="lab-soil-select" class="lab-controls" aria-label="Escolha um solo para testar"></div>
+        <div class="watering-row">
+          <button id="water-button" class="watering-can" type="button" aria-label="Regar os solos escolhidos">🚿<span>Despejar água</span></button>
+          <p id="lab-message" class="live-message" role="status">Escolha um ou mais solos para começar.</p>
+        </div>
+        <div id="lab-vessels" class="vessel-grid" aria-label="Recipientes com amostras de solo"></div>
+        <div id="lab-comparison" class="comparison" hidden aria-live="polite"></div>
+        <div class="question-box">
+          <h3>🧠 Pense como cientista</h3>
+          <p>Depois do mesmo tempo, em qual copo chegou mais água ao fundo? Qual solo reteve parte dela?</p>
+          <button class="answer-toggle" type="button" aria-expanded="false" aria-controls="lab-answer">Mostrar uma pista</button>
+          <p id="lab-answer" class="teacher-answer" hidden>Em nossa simulação, mais água atravessa o solo arenoso rapidamente. No argiloso, chega menos água ao fundo no mesmo intervalo. O humoso fica no meio, retendo parte da água. No calcário, a passagem pode variar: pedras não significam que ele sempre bloqueia a água.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Descobertas no mundo subterrâneo -->
+    <section id="mundo-subterraneo" class="section underworld-section" aria-labelledby="underworld-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Uma missão especial com a Lola</p>
+          <h2 id="underworld-title">🌎 O Mundo Debaixo da Terra</h2></div>
+        <p>O solo é cheio de vida! Desça para descobrir quem mora entre a terra, a água e as raízes.</p>
+      </div>
+      <div class="underworld-card">
+        <div class="underworld-mission">
+          <div>
+            <h3>Encontre os 5 segredos do subterrâneo!</h3>
+            <p>Explore o corte do solo e toque em cada surpresa. As camadas são ilustrativas: os solos podem ser diferentes de um lugar para outro.</p>
+          </div>
+          <div class="discovery-progress" aria-live="polite">
+            <strong id="discovery-count">0 de 5 descobertas!</strong>
+            <div id="discovery-markers" class="discovery-markers" aria-label="Segredos encontrados"></div>
+          </div>
+        </div>
+        <div class="underworld-controls">
+          <button id="descend-button" class="button button-green" type="button">🧭 Explorar o subterrâneo</button>
+          <button id="surface-button" class="button button-blue" type="button" hidden>↑ Voltar à superfície</button>
+          <button id="underworld-reset" class="text-button" type="button">↻ Reiniciar missão</button>
+          <span id="underworld-stage-label" class="stage-label" aria-live="polite">Você está na superfície</span>
+        </div>
+        <div id="underworld-viewport" class="underworld-viewport" aria-label="Cenário ilustrado da superfície e das camadas do solo">
+          <div id="underworld-world" class="underworld-world">
+            <div class="under-sky" aria-hidden="true">
+              <span class="under-cloud under-cloud-one"></span><span class="under-cloud under-cloud-two"></span>
+              <span class="under-sun">☀</span><span class="surface-butterfly butterfly-a"><img src="assets/icons/butterfly.svg" alt=""></span>
+              <span class="surface-butterfly butterfly-b"><img src="assets/icons/butterfly.svg" alt=""></span>
+              <span class="surface-tree tree-left" aria-hidden="true"><i></i><b></b></span>
+              <span class="surface-tree tree-right" aria-hidden="true"><i></i><b></b></span>
+              <span class="surface-bush bush-left" aria-hidden="true"></span><span class="surface-bush bush-right" aria-hidden="true"></span>
+            </div>
+            <div class="surface-grass" aria-hidden="true"><span>🌼</span><span>🌿</span><span>🌷</span><span>🌼</span><span>🌱</span><span>🌻</span><span>🌿</span></div>
+            <div class="ground-layers" aria-hidden="true"><span class="layer-label label-top">terra fofa</span><span class="layer-label label-middle">terra e pedrinhas</span><span class="layer-label label-deep">mais fundo</span></div>
+            <svg class="root-art root-art-one" viewBox="0 0 190 340" aria-hidden="true"><path d="M94 0c-2 56 12 73 4 112s-39 57-23 101 7 76 1 127M98 67c26 28 55 31 73 61M83 131c-30 20-48 42-61 74m53-12c29 16 40 48 37 78m-27-113c-9 19-28 29-48 37" fill="none" stroke="#f1c982" stroke-width="10" stroke-linecap="round"/><path d="M94 0c-2 56 12 73 4 112s-39 57-23 101 7 76 1 127M98 67c26 28 55 31 73 61M83 131c-30 20-48 42-61 74m53-12c29 16 40 48 37 78m-27-113c-9 19-28 29-48 37" fill="none" stroke="#9b6738" stroke-width="3" stroke-linecap="round"/></svg>
+            <svg class="root-art root-art-two" viewBox="0 0 150 300" aria-hidden="true"><path d="M76 0c-9 45 7 79-2 119s15 56 0 94 5 54-8 87m10-215c19 17 33 20 56 42M74 117c-22 16-44 30-61 56m59 43c22 11 34 24 45 46" fill="none" stroke="#f1c982" stroke-width="9" stroke-linecap="round"/></svg>
+            <div class="tunnel tunnel-one" aria-hidden="true"></div><div class="tunnel tunnel-two" aria-hidden="true"></div><div class="tunnel tunnel-three" aria-hidden="true"></div>
+            <div class="soil-specks" aria-hidden="true">·　·　•　　 ·　　 •　·　　·</div>
+            <button class="secret secret-worm" type="button" data-secret="worm" aria-label="Descobrir a minhoca do solo">
+              <img src="assets/images/minhoca.svg" alt=""><span class="secret-hint">Minhoca</span>
+            </button>
+            <button class="secret secret-roots" type="button" data-secret="roots" aria-label="Descobrir as raízes das plantas">
+              <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M51 4v34M51 21 28 37M51 29l22 13M51 37v48M51 55 35 72m16-7 18 19" fill="none" stroke="#f8d99c" stroke-width="8" stroke-linecap="round"/><path d="M51 4v34M51 21 28 37M51 29l22 13M51 37v48M51 55 35 72m16-7 18 19" fill="none" stroke="#94643b" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <span class="secret-hint">Raízes</span>
+            </button>
+            <button class="secret secret-ants" type="button" data-secret="ants" aria-label="Descobrir as formigas nos túneis">
+              <svg viewBox="0 0 120 70" aria-hidden="true"><path d="m28 38-13-13m15 19L15 53m35-17-4-17m9 18 13-16m13 8 10-15m-8 22 16 5m-62 4-8 15m37-14 5 17m12-21 13 13" fill="none" stroke="#473127" stroke-width="3" stroke-linecap="round"/><g fill="#4a3027" stroke="#fff3d6" stroke-width="2"><circle cx="39" cy="39" r="8"/><circle cx="61" cy="39" r="10"/><circle cx="84" cy="39" r="8"/></g><path d="m36 31-5-9m8 9 4-10m37 10 5-9m8 9 5-8" fill="none" stroke="#4a3027" stroke-width="2"/></svg>
+              <span class="secret-hint">Formigas</span>
+            </button>
+            <button class="secret secret-stones" type="button" data-secret="stones" aria-label="Descobrir as pedras e minerais do solo">
+              <svg viewBox="0 0 120 80" aria-hidden="true"><path d="m8 65 9-29 25-13 24 12 8 30Z" fill="#b5a58e" stroke="#705b43" stroke-width="4"/><path d="m55 66 12-34 22-14 22 18 3 30Z" fill="#ded3bd" stroke="#705b43" stroke-width="4"/><path d="m24 41 12-7m43 11 13-11" stroke="#fff9e8" stroke-width="4" stroke-linecap="round"/></svg>
+              <span class="secret-hint">Pedrinhas</span>
+            </button>
+            <button class="secret secret-water" type="button" data-secret="water" aria-label="Descobrir a gota de água no solo">
+              <svg viewBox="0 0 70 90" aria-hidden="true"><path d="M35 5C27 23 10 42 10 57a25 25 0 0 0 50 0C60 42 43 23 35 5Z" fill="#70d5f5" stroke="#248fc0" stroke-width="5"/><path d="M23 58c0-8 6-15 12-20" fill="none" stroke="#eaffff" stroke-width="5" stroke-linecap="round"/></svg>
+              <span class="secret-hint">Água</span>
+            </button>
+            <span class="soil-life life-one" aria-hidden="true">✦</span><span class="soil-life life-two" aria-hidden="true">•</span><span class="soil-life life-three" aria-hidden="true">✿</span>
+          </div>
+        </div>
+        <p class="soil-recipe"><strong>O que há no solo?</strong> Partículas minerais, matéria orgânica, água, ar e muitos organismos vivos. As camadas deste cenário são uma ilustração: o solo muda de um lugar para outro.</p>
+        <div class="underworld-bottom">
+          <div class="lola-guide">
+            <img src="assets/images/minhoca.svg" alt="Lola, a minhoca exploradora">
+            <div class="lola-bubble"><strong>Lola diz:</strong><p id="lola-message" aria-live="polite">Olá, explorador! Preparado para descobrir o que existe debaixo dos nossos pés? Vamos juntos!</p></div>
+          </div>
+          <aside id="secret-panel" class="secret-panel" role="region" aria-labelledby="secret-title" aria-live="polite" hidden>
+            <div><p class="eyebrow">Segredo encontrado!</p><h3 id="secret-title" tabindex="-1"></h3><p id="secret-description"></p></div>
+            <div class="secret-panel-actions">
+              <button id="secret-close" class="text-button" type="button">Fechar</button>
+              <button id="secret-continue" class="button button-green" type="button">Continuar explorando</button>
+            </div>
+          </aside>
+        </div>
+        <div id="underworld-celebration" class="underworld-celebration" hidden role="status">
+          <span aria-hidden="true">✨🌼✨</span><strong>Missão cumprida! Você é um verdadeiro explorador do subterrâneo!</strong><span aria-hidden="true">✨🎉✨</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cultivo na hortinha -->
+    <section id="hortinha" class="section garden-game" aria-labelledby="garden-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Mãos à terra!</p><h2 id="garden-title">🌱 Minha hortinha</h2></div>
+        <p>Prepare o canteiro, escolha sua plantinha e cuide dela com carinho.</p>
+      </div>
+      <div class="activity-card garden-card">
+        <div class="garden-instructions">
+          <h3>Uma planta precisa de cuidados</h3>
+          <p>Escolha a plantinha, depois o solo, plante a semente e regue. Cada planta gosta de um lugar diferente!</p>
+          <p class="garden-step-label">1. Escolha a plantinha</p>
+          <div id="garden-plant-options" class="plant-options" aria-label="Escolha uma planta para cultivar"></div>
+          <label for="garden-soil">2. Escolha o solo</label>
+          <select id="garden-soil"><option value="">Selecione um tipo de solo</option></select>
+          <button id="plant-button" class="button button-green" type="button">🌰 3. Plantar semente</button>
+          <button id="garden-water" class="button button-blue" type="button" disabled>💧 4. Regar a plantinha</button>
+          <button id="garden-reset" class="text-button" type="button">↻ Recomeçar a hortinha</button>
+          <p id="garden-message" class="live-message" role="status">Escolha uma plantinha e um solo para começar a aventura!</p>
+        </div>
+        <div class="garden-plot" aria-label="Canteiro de cultivo virtual">
+          <div class="plot-sky"><span class="plot-sun" aria-hidden="true">☀️</span><span class="plot-cloud" aria-hidden="true">☁️</span></div>
+          <div class="garden-decor decor-left" aria-hidden="true">🌼</div>
+          <div class="garden-decor decor-right" aria-hidden="true">🌿</div>
+          <div class="plant-tag" id="plant-tag" aria-live="polite">Plantinha pronta</div>
+          <div id="plant-art" class="plant-art" data-stage="empty" data-plant="" aria-hidden="true">
+            <span class="plant-stem"></span>
+            <span class="plant-leaf leaf-left">🍃</span>
+            <span class="plant-leaf leaf-right">🍃</span>
+            <span class="plant-flower">🌼</span>
+            <span class="seed">●</span>
+          </div>
+          <div class="soil-bed"><span class="root root-one"></span><span class="root root-two"></span><span class="root root-three"></span><span class="flower-flame flame-one">🌼</span><span class="flower-flame flame-two">🌿</span></div>
+          <div class="growth-labels"><span>semente</span><span>broto</span><span>folhas</span><span>crescimento</span></div>
+        </div>
+      </div>
+      <div id="garden-celebration" class="celebration" hidden role="status">🎉 Parabéns, jardineiro explorador! Você plantou e cuidou da sua hortinha!</div>
+    </section>
+
+    <!-- Quiz dos Exploradores -->
+    <section id="quiz" class="section quiz-section" aria-labelledby="quiz-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Você já é um explorador!</p><h2 id="quiz-title">⭐ Quiz dos Exploradores</h2></div>
+        <p>Responda com calma: cada tentativa ajuda a aprender!</p>
+      </div>
+      <div class="activity-card quiz-card">
+        <div class="quiz-topline"><span id="quiz-progress">Pergunta 1 de 8</span><span id="quiz-stars" aria-label="0 estrelas">☆☆☆☆☆☆☆☆</span></div>
+        <div id="quiz-content" aria-live="polite"></div>
+        <div id="quiz-result" class="quiz-result" hidden></div>
+      </div>
+    </section>
+
+    <!-- Progresso e certificado -->
+    <section id="certificado" class="section certificate-section" aria-labelledby="certificate-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">A recompensa da sua aventura!</p><h2 id="certificate-title">🏅 Meu Certificado</h2></div>
+        <p>Veja seu progresso e receba seu Certificado de Pequeno Cientista.</p>
+      </div>
+      <div class="activity-card certificate-card">
+        <div class="certificate-progress-panel">
+          <div class="certificate-progress-heading">
+            <div><h3>Suas descobertas</h3><p id="certificate-progress-count" aria-live="polite">0 de 5 atividades concluídas</p></div>
+            <div class="certificate-progress-track" role="progressbar" aria-label="Progresso para desbloquear o certificado" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><span id="certificate-progress-bar"></span></div>
+          </div>
+          <ul class="certificate-progress-list">
+            <li data-certificate-activity="soils">Explorar os quatro tipos de solo</li>
+            <li data-certificate-activity="lab">Completar os quatro experimentos da água</li>
+            <li data-certificate-activity="underworld">Descobrir os cinco segredos subterrâneos</li>
+            <li data-certificate-activity="garden">Finalizar um cultivo na hortinha</li>
+            <li data-certificate-activity="quiz">Concluir o Quiz dos Exploradores</li>
+          </ul>
+          <p id="certificate-status" class="certificate-status" role="status">Continue suas aventuras para desbloquear o certificado.</p>
+          <div id="certificate-celebration" class="certificate-celebration" hidden>
+            <div class="certificate-confetti" aria-hidden="true"><span>✦</span><span>✿</span><span>✦</span><span>🦋</span><span>✿</span></div>
+            <img src="assets/images/minhoca.svg" alt="Lola, a minhoca exploradora, comemorando">
+            <div class="certificate-celebration-copy">
+              <div class="certificate-medal" aria-hidden="true"><span>★</span></div>
+              <h3>Parabéns, pequeno cientista!</h3>
+              <p>Você completou as aventuras e conquistou o título de Guardião da Natureza!</p>
+              <button id="certificate-receive" class="button button-orange" type="button">🎓 Receber meu certificado</button>
+            </div>
+          </div>
+          <button id="certificate-teacher-open" class="button button-green" type="button" hidden>🎓 Emitir certificado (Modo Professora)</button>
+          <button id="certificate-reset-progress" class="text-button" type="button">↻ Reiniciar progresso para outra criança</button>
+        </div>
+
+        <div id="certificate-name-panel" class="certificate-name-panel" hidden>
+          <h3>Vamos preparar seu certificado!</h3>
+          <label for="certificate-name">Escreva seu primeiro nome</label>
+          <div class="certificate-name-row">
+            <input id="certificate-name" name="certificate-name" type="text" maxlength="30" autocomplete="given-name" placeholder="Seu nome" aria-describedby="certificate-name-help" required>
+            <button id="certificate-generate" class="button button-green" type="button">✨ Gerar meu certificado</button>
+          </div>
+          <p id="certificate-name-help">Use até 30 caracteres. Você pode corrigir o nome antes de imprimir.</p>
+          <p id="certificate-form-error" class="certificate-form-error" role="alert" hidden></p>
+        </div>
+
+        <div id="certificate-output" class="certificate-output" hidden>
+          <article id="certificate-document" class="certificate-document" aria-label="Certificado de Pequeno Cientista">
+            <div class="certificate-inner-border">
+              <img class="certificate-butterfly butterfly-left" src="assets/icons/butterfly.svg" alt="" aria-hidden="true">
+              <img class="certificate-butterfly butterfly-right" src="assets/icons/butterfly.svg" alt="" aria-hidden="true">
+              <span class="certificate-flower flower-top-left" aria-hidden="true">✿</span>
+              <span class="certificate-flower flower-top-right" aria-hidden="true">✿</span>
+              <span class="certificate-flower flower-bottom-left" aria-hidden="true">✿</span>
+              <span class="certificate-flower flower-bottom-right" aria-hidden="true">✿</span>
+              <div class="certificate-document-heading">
+                <span class="certificate-leaf-mark" aria-hidden="true">❧</span>
+                <p class="certificate-logo">Missão <strong>Solo</strong><span>🌱</span></p>
+                <span class="certificate-leaf-mark" aria-hidden="true">❧</span>
+              </div>
+              <p class="certificate-kicker">Com alegria e orgulho, certificamos que</p>
+              <h2>CERTIFICADO DE<br>PEQUENO CIENTISTA</h2>
+              <p class="certificate-recipient-label">Este certificado é concedido a</p>
+              <p id="certificate-recipient" class="certificate-recipient">Pequeno Explorador</p>
+              <div class="certificate-name-rule"></div>
+              <p class="certificate-description">Por concluir as aventuras do Missão Solo, explorar os diferentes tipos de solo, investigar o comportamento da água, descobrir os segredos do mundo subterrâneo e aprender sobre a importância das plantas e da natureza.</p>
+              <div class="certificate-document-footer">
+                <div class="certificate-signature"><span id="certificate-date">Data de conclusão</span><span class="signature-line"></span><strong>Data da conclusão</strong></div>
+                <div class="certificate-guardian-seal"><span class="seal-leaves" aria-hidden="true">❧</span><span>GUARDIÃO<br>DA NATUREZA</span><span class="seal-star" aria-hidden="true">★</span></div>
+                <div class="certificate-lola-wrap">
+                  <img src="assets/images/minhoca.svg" alt="Lola, minhoca exploradora">
+                  <strong>Missão cumprida!</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+          <div class="certificate-print-actions">
+            <button id="certificate-print" class="button button-green" type="button">🖨️ Imprimir certificado</button>
+            <button id="certificate-pdf" class="button button-blue" type="button">📄 Salvar em PDF</button>
+            <button id="certificate-edit" class="text-button" type="button">✏️ Editar nome</button>
+          </div>
+          <p id="certificate-print-confirmation" class="certificate-print-confirmation" role="status" hidden>Aguarde a fala da Lola terminar; depois confirme para abrir a impressão. Para salvar em PDF, selecione essa opção na janela de impressão.</p>
+          <button id="certificate-continue-print" class="button button-orange" type="button" hidden>Continuar para impressão</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Encerramento da missão -->
+    <section class="closing-strip" aria-label="Mensagem da missão">
+      <img src="assets/images/minhoca.svg" alt="" aria-hidden="true">
+      <p><strong>Missão cumprida?</strong> A natureza está cheia de coisas incríveis para descobrir. Continue observando o mundo ao seu redor! 🌼</p>
+      <button id="reset-activities" class="button button-orange" type="button">↻ Reiniciar atividades</button>
+    </section>
+  </main>
+
+  <footer><span>Missão Solo 🌱</span><span>Ciências • 3º ano do Ensino Fundamental</span><a href="#inicio">Voltar ao começo ↑</a></footer>
+  <aside id="lola-voice-dialog" class="lola-voice-dialog" role="region" aria-label="Fala da Lola" aria-live="polite" hidden>
+    <img src="assets/images/minhoca.svg" alt="" aria-hidden="true">
+    <div class="voice-dialog-content">
+      <strong id="lola-voice-status">Fala da Lola</strong>
+      <p id="lola-voice-text"></p>
+      <div class="voice-dialog-actions">
+        <button id="lola-repeat" type="button" aria-label="Ouvir novamente a fala da Lola" disabled>🔁 Ouvir novamente</button>
+        <button id="lola-stop" type="button" aria-label="Interromper a fala da Lola" disabled>⏹ Parar</button>
+        <button id="lola-close" type="button" aria-label="Fechar o balão da Lola">✕ Fechar</button>
+      </div>
+    </div>
+  </aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
